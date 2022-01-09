@@ -1,0 +1,31 @@
+.item-container {
+    min-height: 20vh;
+    background-color: rgba(30, 30, 30, 0.8);
+    margin: 2vh;
+    padding: 2vh;
+}
+
+.material-icons-outlined {
+    font-size: 14pt;
+}
+.icon-news {
+    font-size: 50pt;
+    margin-left: -1vh;   
+}
+
+.item-meta-col {
+    color: #999999FF;
+}
+.item-title {
+    font-size: 20pt;
+}
+
+.chat-meta-col {
+    display: flex;
+    align-items: center;
+    color: #999999FF;
+}
+
+.chat-info {
+    margin-left: 1vw;
+}
