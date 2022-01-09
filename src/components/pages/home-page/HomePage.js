@@ -18,7 +18,7 @@ export default class HomePage extends React.Component {
     async fetchTopNews() {
         let response = await newsApiService.fetchTopNews();
         let data = [];
-        [...Array(10).keys()].map(async (id) => {
+        [...Array(100).keys()].map(async (id) => {
             data.push(await newsApiService.fetchNewsItem(response[id]));
             this.setState({ 'news_items': data }, () => {
                 // console.log(this.state.news_items.length);
