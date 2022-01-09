@@ -38,7 +38,7 @@ export default class HomePage extends React.Component {
                                         <Row className="item-meta-col" xs="auto">
                                             <Col id={`item-by-${index}`}>{item.by}</Col>
                                             <Col>&#9679;</Col>
-                                            <Col id={`item-time-${index}`}>{item.time}</Col>
+                                            <Col id={`item-time-${index}`}>{new Date(item.time * 1000).toLocaleDateString("en-US")}</Col>
                                         </Row>
                                     </Col>
                                     <Col id={`item-title-${index}`} className="item-title">
