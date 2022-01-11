@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: news-frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: news-frontend
+  template:
+    metadata:
+      labels:
+        app: news-frontend
+    spec:
+      containers:
+      - name: news-frontend
+        image: registry.digitalocean.com/hacker-news-cr/news_ui:latest        
+        ports:
+        - containerPort: 8080
