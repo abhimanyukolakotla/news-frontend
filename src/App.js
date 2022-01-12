@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        Hacker News!
+        <h1 className="App-title">Hacker News!</h1>
       </header>
       <Routes>
         <Route path="/" element={<HomePage />} />

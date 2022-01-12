@@ -3,6 +3,9 @@
   background-color: black;
   color: white;
 }
+.App-title {
+  margin: 2vh 0;
+}
 
 .App-header {
   display: flex;

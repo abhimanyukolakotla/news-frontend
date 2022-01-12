@@ -16,6 +16,15 @@
 .icon-news {
     font-size: 50pt;
     margin-left: -1vh;   
+    text-shadow:
+    0 0 10px #fff,
+    0 0 10px #fff,
+    0 0 10px #fff,
+    0 0 10px #fff,
+    0 0 10px #fff,
+    0 0 10px #fff,
+    0 0 10px #fff,
+    0 0 10px #fff;
 }
 
 .item-meta-col {
