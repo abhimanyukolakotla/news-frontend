@@ -49,3 +49,17 @@
     color: white;
 }
 
+.spinner-container {
+    text-align: center;
+}
+
+.spinner-grow {
+    width: 10rem;
+    height: 10rem;
+}
+
+.spinner-border {
+    width: 5rem;
+    height: 5rem;
+    border-width: 0.5rem;
+}
