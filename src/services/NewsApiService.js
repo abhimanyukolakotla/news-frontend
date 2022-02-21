@@ -4,13 +4,13 @@ class NewsApiService {
         this.baseUrl = process.env.REACT_APP_BACKEND_SERVICE_URL === undefined? "api": this.baseUrl;
     }
     async fetchTopNews() {
-        let baseUrl = getBaseUrl();
+        let baseUrl = this.getBaseUrl();
         var response =  await fetch(`${baseUrl}/topstories.json`);
         return response.json();
     }
 
     async fetchNewsItem(id) {
-        let baseUrl = getBaseUrl();
+        let baseUrl = this.getBaseUrl();
         var response =  await fetch(`${baseUrl}/item/${id}.json`);
         return response.json();
     }
