@@ -1,7 +1,7 @@
 class NewsApiService {
     baseUrl = process.env.REACT_APP_BACKEND_SERVICE_URL + ":" + process.env.REACT_APP_BACKEND_SERVICE_PORT + "/api";
     async fetchTopNews() {
-        if(process.env.REACT_APP_BACKEND_SERVICE_URL == undefined) {
+        if(process.env.REACT_APP_BACKEND_SERVICE_URL === undefined) {
             this.baseUrl = "";
         }
         var response =  await fetch(`${this.baseUrl}/topstories.json`);
@@ -9,6 +9,9 @@ class NewsApiService {
     }
 
     async fetchNewsItem(id) {
+        if(process.env.REACT_APP_BACKEND_SERVICE_URL === undefined) {
+            this.baseUrl = "";
+        }
         var response =  await fetch(`${this.baseUrl}/item/${id}.json`);
         return response.json();
     }
