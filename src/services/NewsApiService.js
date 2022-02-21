@@ -4,13 +4,21 @@ class NewsApiService {
         this.baseUrl = process.env.REACT_APP_BACKEND_SERVICE_URL === undefined? "api": this.baseUrl;
     }
     async fetchTopNews() {
-        var response =  await fetch(`${this.baseUrl}/topstories.json`);
+        let baseUrl = getBaseUrl();
+        var response =  await fetch(`${baseUrl}/topstories.json`);
         return response.json();
     }
 
     async fetchNewsItem(id) {
-        var response =  await fetch(`${this.baseUrl}/item/${id}.json`);
+        let baseUrl = getBaseUrl();
+        var response =  await fetch(`${baseUrl}/item/${id}.json`);
         return response.json();
+    }
+
+    getBaseUrl() {
+        if( process.env.REACT_APP_BACKEND_SERVICE_URL === undefined)
+            return "api"
+        else return this.baseUrl;
     }
 }
 
